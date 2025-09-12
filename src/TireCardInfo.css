@@ -1,0 +1,47 @@
+.tire-card {
+  flex: 0 0 220px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 4px solid #ffbf36;
+  transition: box-shadow 0.3s ease;
+  padding: 10px;
+}
+
+.tire-card img {
+  max-width: 160px;
+  max-height: 160px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.tire-card:hover img {
+  transform: scale(1.05);
+}
+
+.tire-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.tire-card h3::after {
+  content: "➔";
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.tire-card:hover h3::after {
+  color: #d62828;
+}

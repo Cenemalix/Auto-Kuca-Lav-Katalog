@@ -1,0 +1,20 @@
+.map-container {
+  margin-top: 50px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.map-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

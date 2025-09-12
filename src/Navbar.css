@@ -1,0 +1,213 @@
+.Navbar {
+  position: relative;
+  height: 60px;
+  background-color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 40px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* animacija X kad je aktivan */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.Phars {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.Phars p {
+  margin: 0;
+  font-weight: 600;
+  color: #f0f0f0;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.Phars p:hover {
+  color: #fff;
+}
+
+.Phars a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000000;
+  background-color: #ffbf36;
+  border-radius: 12px;
+  padding: 8px 16px;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 0;
+  display: inline-block;
+  box-shadow: none;
+}
+
+.Phars a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: white;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease;
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.Phars a:hover::before {
+  width: 100%;
+}
+
+.Phars a:hover {
+  color: #d62828;
+}
+
+.Phars p,
+.Phars a {
+  position: relative;
+  display: inline-block;
+}
+
+.Phars p::after,
+.Phars a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: #ffeb3b;
+  transition: width 0.3s ease;
+}
+
+.Phars p:hover::after,
+.Phars a:hover::after {
+  width: 100%;
+}
+
+.SearchBar {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.SearchBar input {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1.5px solid #ccc;
+  transition: border-color 0.3s ease;
+  min-width: 180px;
+}
+
+.SearchBar input:focus {
+  outline: none;
+  border-color: #ffbf36;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.search-button:hover {
+  color: #ffeb3b;
+}
+
+/* Za Chrome, Safari, Edge */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Za Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    z-index: 1100;
+  }
+
+  .Phars {
+    position: fixed;
+    top: 180px;
+    left: 0;
+    width: 50%;
+    height: 200px;
+    background: #ff0000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: none;
+  }
+
+  .Phars.active {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .SearchBar {
+    position: absolute;
+    right: 10px;
+  }
+}

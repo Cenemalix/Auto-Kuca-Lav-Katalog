@@ -1,0 +1,111 @@
+.HeroSection {
+    height: 70vh;
+    background-image: url('./images/Untitled\ design\ \(13\).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    user-select: none;
+}
+
+.HeroSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.164);
+    z-index: 0;
+}
+
+.HeroContent {
+    z-index: 1;
+    padding: 20px 40px;
+    position: relative;
+    top: -20%;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .HeroSection {
+        height: 400px;
+        padding: 20px;
+    }
+
+    .HeroContent {
+        top: 0;
+        padding: 20px;
+    }
+
+    .HeroContent h2 {
+        font-size: 20px;
+    }
+
+    .HeroContent p {
+        font-size: 14px;
+    }
+}
+
+
+.aboutBtn {
+    background-color: #FFBF36;
+    color: rgb(0, 0, 0);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.aboutBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: white;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+.aboutBtn:hover::before {
+    width: 100%;
+}
+
+.aboutBtn:hover {
+    color: #d62828;
+    /* crvena boja teksta */
+}
+
+
+.aboutBtn::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 25%;
+    height: 3px;
+    width: 50%;
+}
+
+
+.HeroContent {
+    z-index: 1;
+    padding: 20px 40px;
+}
+
+.HeroContent h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}

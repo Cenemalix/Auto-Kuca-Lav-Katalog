@@ -1,0 +1,41 @@
+.tire-card {
+  width: 220px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.tire-card:hover {
+  transform: scale(1.03);
+}
+
+.tire-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.tire-card h3 {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.tire-card .dimension {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.tire-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e53935;
+  margin-top: 8px;
+}

@@ -1,0 +1,119 @@
+.MiddleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-top: -10vh;
+  position: relative;
+  z-index: 2;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  background-color: #ff0000;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 80%;
+  width: 100rem;
+  justify-content: center;
+}
+
+.form-container select {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ffbf36;
+  border-radius: 0.6rem;
+  outline: none;
+  min-width: 120px;
+  transition: border-color 0.2s ease;
+  flex: 1 1 120px;
+}
+
+.select-default {
+  color: gray;
+}
+
+.select-default:valid {
+  color: black;
+}
+
+.form-container select:focus {
+  border-color: #007bff;
+}
+
+.form-container button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: #ffbf36;
+  border: 1px solid #d6a300;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 60px;
+  align-self: center;
+}
+
+.form-container button:hover {
+  background-color: #f5ae00;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 7vh;
+  }
+
+  .form-container select,
+  .form-container button {
+    width: 100%;
+    flex: none;
+    font-size: 0.8rem;
+  }
+}
+
+.select-button-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffbf36;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  height: 60px;
+}
+
+.select-button-wrap select {
+  border: 2px solid #ffbf36;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.submit-button button {
+  height: 100%;
+  border: none;
+  border-left: 2px solid #ffbf36;
+  background-color: #ffbf36;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: black;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button button:hover {
+  background-color: #f5ae00;
+  color: white;
+}
+
+select {
+  -webkit-text-fill-color: black;
+}
