@@ -61,7 +61,7 @@ function MiddleSection() {
           </option>
           <option value="">Sve sezone</option>
           {seasonOptions.map((s) => (
-            <option key={s} value={s}>
+            <option value={s}>
               {s}
             </option>
           ))}
@@ -73,7 +73,7 @@ function MiddleSection() {
           </option>
           <option value="">Svi proizvođači</option>
           {supplierOptions.map((m) => (
-            <option key={m} value={m}>
+            <option value={m}>
               {m}
             </option>
           ))}
@@ -84,7 +84,7 @@ function MiddleSection() {
             Širina gume
           </option>
           {widthOptions.map((w) => (
-            <option key={w} value={w}>
+            <option value={w}>
               {w}
             </option>
           ))}
@@ -95,7 +95,7 @@ function MiddleSection() {
             Visina gume
           </option>
           {heightOptions.map((h) => (
-            <option key={h} value={h}>
+            <option value={h}>
               {h}
             </option>
           ))}
@@ -111,7 +111,7 @@ function MiddleSection() {
               Promjer gume
             </option>
             {diameterOptions.map((i) => (
-              <option key={i} value={i}>{`R${i}`}</option>
+              <option value={i}>{`R${i}`}</option>
             ))}
           </select>
         </div>

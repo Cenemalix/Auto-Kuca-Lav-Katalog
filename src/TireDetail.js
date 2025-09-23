@@ -114,7 +114,7 @@ function TireDetail({ tires }) {
           >
             <option value="">Svi</option>
             {supplierOptions.map((s) => (
-              <option key={s} value={s}>
+              <option value={s}>
                 {s}
               </option>
             ))}
@@ -130,7 +130,7 @@ function TireDetail({ tires }) {
           >
             <option value="">Sve</option>
             {seasonOptions.map((s) => (
-              <option key={s} value={s}>
+              <option value={s}>
                 {s}
               </option>
             ))}
@@ -146,7 +146,7 @@ function TireDetail({ tires }) {
           >
             <option value="">Sve</option>
             {widthOptions.map((w) => (
-              <option key={w} value={w}>
+              <option value={w}>
                 {w}
               </option>
             ))}
@@ -162,7 +162,7 @@ function TireDetail({ tires }) {
           >
             <option value="">Sve</option>
             {heightOptions.map((h) => (
-              <option key={h} value={h}>
+              <option value={h}>
                 {h}
               </option>
             ))}
@@ -178,7 +178,7 @@ function TireDetail({ tires }) {
           >
             <option value="">Svi</option>
             {diameterOptions.map((d) => (
-              <option key={d} value={d}>
+              <option value={d}>
                 {d}
               </option>
             ))}
