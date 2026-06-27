@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import "./App.css";
 import LogoBar from "./LogoBar";
@@ -40,7 +40,6 @@ function App() {
           }
         />
 
-        {/* Jednostavna ruta, query parametri se čitaju u TireDetail */}
         <Route path="/tires" element={<TireDetail tires={tiresData} />} />
       </Routes>
       <Map />

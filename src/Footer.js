@@ -6,9 +6,6 @@ import clock from "./images/clock.png";
 import "./Footer.css";
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
